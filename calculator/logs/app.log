@@ -1,0 +1,50 @@
+2025-02-24 00:18:15 [main] INFO  c.e.c.service.KafkaConsumerService - [test-req-789] Received message: div,10,0 with Request ID: test-req-789
+2025-02-24 00:18:15 [main] INFO  c.e.c.service.KafkaConsumerService - [test-req-123] Received message: sum,3,2 with Request ID: test-req-123
+2025-02-24 00:18:15 [main] INFO  c.e.c.service.KafkaConsumerService - [test-req-123] Calculation Result: 5 with Request ID: test-req-123
+2025-02-24 00:18:15 [main] INFO  c.e.c.service.KafkaConsumerService - [test-req-456] Received message: mul,3,5 with Request ID: test-req-456
+2025-02-24 00:18:15 [main] INFO  c.e.c.service.KafkaConsumerService - [test-req-456] Calculation Result: 15 with Request ID: test-req-456
+2025-02-24 03:50:21 [main] INFO  c.e.c.service.KafkaConsumerService - [] [test-req-789] Received message: div,10,0
+2025-02-24 03:50:21 [main] ERROR c.e.c.service.KafkaConsumerService - [] [test-req-789] Error during calculation: Division by zero is not allowed
+2025-02-24 03:50:21 [main] INFO  c.e.c.service.KafkaConsumerService - [] [test-req-789] Sending response: {"error": "Division by zero is not allowed"}
+2025-02-24 03:50:21 [main] INFO  c.e.c.service.KafkaConsumerService - [] [test-req-123] Received message: sum,3,2
+2025-02-24 03:50:21 [main] INFO  c.e.c.service.KafkaConsumerService - [] [test-req-123] Sending response: {"result": 5}
+2025-02-24 03:50:21 [main] INFO  c.e.c.service.KafkaConsumerService - [] [test-req-456] Received message: mul,3,5
+2025-02-24 03:50:21 [main] INFO  c.e.c.service.KafkaConsumerService - [] [test-req-456] Sending response: {"result": 15}
+2025-02-24 18:38:30 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Received message: sum,8,3
+2025-02-24 18:38:30 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Calculation Result: 11
+2025-02-24 18:38:30 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Sending response: {"result": 11}
+2025-02-24 18:38:31 [main] ERROR c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Unexpected error: Cannot invoke "java.util.concurrent.CompletableFuture.whenComplete(java.util.function.BiConsumer)" because the return value of "org.springframework.kafka.core.KafkaTemplate.send(org.apache.kafka.clients.producer.ProducerRecord)" is null
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Sending response: {"error": "Error processing request"}
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-2] [test-id-2] Received message: sub,10,4
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-2] [test-id-2] Calculation Result: 6
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-2] [test-id-2] Sending response: {"result": 6}
+2025-02-24 18:38:31 [main] ERROR c.e.c.service.KafkaConsumerService - [test-id-2] [test-id-2] Unexpected error: Cannot invoke "java.util.concurrent.CompletableFuture.whenComplete(java.util.function.BiConsumer)" because the return value of "org.springframework.kafka.core.KafkaTemplate.send(org.apache.kafka.clients.producer.ProducerRecord)" is null
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-2] [test-id-2] Sending response: {"error": "Error processing request"}
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-6] [test-id-6] Received message: mod,5,3
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-6] [test-id-6] Sending response: {"error": "Unsupported operation"}
+2025-02-24 18:38:31 [main] ERROR c.e.c.service.KafkaConsumerService - [test-id-6] [test-id-6] Unexpected error: Cannot invoke "java.util.concurrent.CompletableFuture.whenComplete(java.util.function.BiConsumer)" because the return value of "org.springframework.kafka.core.KafkaTemplate.send(org.apache.kafka.clients.producer.ProducerRecord)" is null
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-6] [test-id-6] Sending response: {"error": "Error processing request"}
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-5] [test-id-5] Received message: div,5,0
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-5] [test-id-5] Sending response: {"error": "Division by zero is not allowed"}
+2025-02-24 18:38:31 [main] ERROR c.e.c.service.KafkaConsumerService - [test-id-5] [test-id-5] Unexpected error: Cannot invoke "java.util.concurrent.CompletableFuture.whenComplete(java.util.function.BiConsumer)" because the return value of "org.springframework.kafka.core.KafkaTemplate.send(org.apache.kafka.clients.producer.ProducerRecord)" is null
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-5] [test-id-5] Sending response: {"error": "Error processing request"}
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-3] [test-id-3] Received message: mul,6,7
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-3] [test-id-3] Calculation Result: 42
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-3] [test-id-3] Sending response: {"result": 42}
+2025-02-24 18:38:31 [main] ERROR c.e.c.service.KafkaConsumerService - [test-id-3] [test-id-3] Unexpected error: Cannot invoke "java.util.concurrent.CompletableFuture.whenComplete(java.util.function.BiConsumer)" because the return value of "org.springframework.kafka.core.KafkaTemplate.send(org.apache.kafka.clients.producer.ProducerRecord)" is null
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-3] [test-id-3] Sending response: {"error": "Error processing request"}
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-4] [test-id-4] Received message: div,10,2
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-4] [test-id-4] Calculation Result: 5.0000000000
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-4] [test-id-4] Sending response: {"result": 5.0000000000}
+2025-02-24 18:38:31 [main] ERROR c.e.c.service.KafkaConsumerService - [test-id-4] [test-id-4] Unexpected error: Cannot invoke "java.util.concurrent.CompletableFuture.whenComplete(java.util.function.BiConsumer)" because the return value of "org.springframework.kafka.core.KafkaTemplate.send(org.apache.kafka.clients.producer.ProducerRecord)" is null
+2025-02-24 18:38:31 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-4] [test-id-4] Sending response: {"error": "Error processing request"}
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Received message: sum,8,3
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Calculation Result: 11
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Sending response: {"result": 11}
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-1] [test-id-1] Response successfully sent to Kafka
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-6] [test-id-6] Received message: mod,5,3
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-6] [test-id-6] Sending response: {"error": "Unsupported operation"}
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-6] [test-id-6] Response successfully sent to Kafka
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-5] [test-id-5] Received message: div,5,0
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-5] [test-id-5] Sending response: {"error": "Division by zero is not allowed"}
+2025-02-24 18:42:25 [main] INFO  c.e.c.service.KafkaConsumerService - [test-id-5] [test-id-5] Response successfully sent to Kafka
