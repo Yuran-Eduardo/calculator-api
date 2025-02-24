@@ -17,7 +17,9 @@ It is a RESTful Calculator API built with **Spring Boot & Apache Kafka**.
 
 ### **🔹 1. Clone the repository**
 
-git clone https://github.com/yuran-eduardo/calculator-api.git cd calculator-api
+git clone https://github.com/yuran-eduardo/calculator-api.git 
+
+cd calculator-api
 
 ### **🔹 2. Build the project**
 
@@ -69,7 +71,7 @@ or
 ---
 
 ## 📌 Technologies Used
-- **Java 17**
+- **Java 21**
 - **Spring Boot 3**
 - **Apache Kafka**
 - **JUnit & Mockito**
