@@ -28,7 +28,7 @@ public class CalculatorController {
             @RequestHeader(value = "X-Request-ID", required = false) String requestId) {
 
         if (requestId == null || requestId.isEmpty()) {
-            requestId = UUID.randomUUID().toString(); // Gerar se não for fornecido
+            requestId = UUID.randomUUID().toString();
         }
 
         MDC.put("requestId", requestId);
@@ -39,7 +39,7 @@ public class CalculatorController {
         MDC.clear();
 
         return ResponseEntity.ok()
-                .header("X-Request-ID", requestId) // Adicionando request ID no header da resposta
+                .header("X-Request-ID", requestId)
                 .body(response);
     }
 }

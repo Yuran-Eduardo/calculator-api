@@ -40,7 +40,7 @@ public class KafkaConsumerService {
                 return;
             }
 
-            String operation = parts[0].trim().toLowerCase(); // Normalizando a operação
+            String operation = parts[0].trim().toLowerCase();
             BigDecimal a = new BigDecimal(parts[1]);
             BigDecimal b = new BigDecimal(parts[2]);
 

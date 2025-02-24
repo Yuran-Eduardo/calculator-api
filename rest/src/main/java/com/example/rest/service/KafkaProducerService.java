@@ -50,11 +50,11 @@ public class KafkaProducerService {
     @KafkaListener(topics = "calculator-response-topic", groupId = "rest-group")
     public void listenResponse(String message, @Header(name = "X-Request-ID", required = false) String requestId) {
         if (requestId == null) {
-            logger.error("⚠️ Received response without X-Request-ID! Response: {}", message);
+            logger.error(" Received response without X-Request-ID! Response: {}", message);
             return;
         }
 
-        logger.info("[{}] ✅ Received response from Kafka: {}", requestId, message);
+        logger.info("[{}]  Received response from Kafka: {}", requestId, message);
 
         synchronized (this) {
             this.latestResponse = message;
